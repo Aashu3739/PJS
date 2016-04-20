@@ -1,0 +1,17 @@
+CREATE KEYSPACE demo
+with placement_strategy = 'org.apache.cassandra.locator.SimpleStrategy'
+and strategy_options = [{replication_factor:1}];
+
+use demo;
+CREATE COLUMN FAMILY users
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata = [
+{column_name: timestamp1, validation_class: UTF8Type}
+{column_name: symbol, validation_class: UTF8Type}
+{column_name: Bid_Price, validation_class: UTF8Type}
+{column_name: Ask_Price, validation_class: UTF8Type}
+{column_name: Low, validation_class: UTF8Type}
+{column_name: High, validation_class: UTF8Type}
+];
+
