@@ -1,3 +1,4 @@
+##Classification and Regression Tree
 #To prepare the rules and matrix for a specific cart
 
 table_cor<-function(fit,log_data,z,o)
